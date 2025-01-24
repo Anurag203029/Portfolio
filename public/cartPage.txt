@@ -1,0 +1,246 @@
+// import "@/styles/cartPage.scss";
+
+// export default function SignUp() {
+//   return (
+//     <>
+//     <section className="cart-main-wrapper section-padding">
+//         <div className="container">
+//             <div className="section-bg-color">
+//                 <div className="row">
+//                     <div className="col-lg-12">
+//                         <div className="cart-table table-responsive">
+//                             <table className="table table-bordered">
+//                                 <thead>
+//                                     <tr>
+//                                         <th className="pro-thumbnail">Thumbnail</th>
+//                                         <th className="pro-title">Product</th>
+//                                         <th className="pro-price">Price</th>
+//                                         <th className="pro-quantity">Quantity</th>
+//                                         <th className="pro-subtotal">Total</th>
+//                                         <th className="pro-remove">Remove</th>
+//                                     </tr>
+//                                 </thead>
+//                                 <tbody>
+//                                     <tr>
+//                                         <td className="pro-thumbnail"><a href="#"><img className="img-fluid" src="assets/img/product/product-1.jpg" alt="Product" /></a></td>
+//                                         <td className="pro-title"><a href="#">Diamond Exclusive Ornament</a></td>
+//                                         <td className="pro-price"><span>$295.00</span></td>
+//                                         <td className="pro-quantity">
+//                                             <div className="pro-qty"><input type="text" value="1" /></div>
+//                                         </td>
+//                                         <td className="pro-subtotal"><span>$295.00</span></td>
+//                                         <td className="pro-remove"><a href="#"><i className="fa fa-trash-o"></i></a></td>
+//                                     </tr>
+//                                     <tr>
+//                                         <td className="pro-thumbnail"><a href="#"><img className="img-fluid" src="assets/img/product/product-2.jpg" alt="Product" /></a></td>
+//                                         <td className="pro-title"><a href="#">Perfect Diamond Jewelry</a></td>
+//                                         <td className="pro-price"><span>$275.00</span></td>
+//                                         <td className="pro-quantity">
+//                                             <div className="pro-qty"><input type="text" value="2" /></div>
+//                                         </td>
+//                                         <td className="pro-subtotal"><span>$550.00</span></td>
+//                                         <td className="pro-remove"><a href="#"><i className="fa fa-trash-o"></i></a></td>
+//                                     </tr>
+//                                     <tr>
+//                                         <td className="pro-thumbnail"><a href="#"><img className="img-fluid" src="assets/img/product/product-3.jpg" alt="Product" /></a></td>
+//                                         <td className="pro-title"><a href="#">Handmade Golden Necklace</a></td>
+//                                         <td className="pro-price"><span>$295.00</span></td>
+//                                         <td className="pro-quantity">
+//                                             <div className="pro-qty">
+//                                                 <input type="text" value="1" />
+//                                             </div>
+//                                         </td>
+//                                         <td className="pro-subtotal"><span>$295.00</span></td>
+//                                         <td className="pro-remove"><a href="#"><i className="fa fa-trash-o"></i></a></td>
+//                                     </tr>
+//                                     <tr>
+//                                         <td className="pro-thumbnail"><a href="#"><img className="img-fluid" src="assets/img/product/product-4.jpg" alt="Product" /></a></td>
+//                                         <td className="pro-title"><a href="#">Diamond Exclusive Ornament</a></td>
+//                                         <td className="pro-price"><span>$110.00</span></td>
+//                                         <td className="pro-quantity">
+//                                             <div className="pro-qty">
+//                                                 <input type="text" value="3" />
+//                                             </div>
+//                                         </td>
+//                                         <td className="pro-subtotal"><span>$110.00</span></td>
+//                                         <td className="pro-remove"><a href="#"><i className="fa fa-trash-o"></i></a></td>
+//                                     </tr>
+//                                 </tbody>
+//                             </table>
+//                         </div>
+//                         <div className="cart-update-option d-block d-md-flex justify-content-between">
+//                             <div className="apply-coupon-wrapper">
+//                                 <form action="#" method="post" className=" d-block d-md-flex">
+//                                     <input type="text" placeholder="Enter Your Coupon Code" required />
+//                                     <button className="btn btn-sqr">Apply Coupon</button>
+//                                 </form>
+//                             </div>
+//                             <div className="cart-update">
+//                                 <a href="#" className="btn btn-sqr">Update Cart</a>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div className="row">
+//                     <div className="col-lg-5 ml-auto">
+//                         <div className="cart-calculator-wrapper">
+//                             <div className="cart-calculate-items">
+//                                 <h6>Cart Totals</h6>
+//                                 <div className="table-responsive">
+//                                     <table className="table">
+//                                         <tr>
+//                                             <td>MRP</td>
+//                                             <td>₹99.99</td>
+//                                         </tr>
+//                                         <tr>
+//                                             <td>Discount</td>
+//                                             <td style={{color: "#12bb12"}}>₹99.99</td>
+//                                         </tr>
+//                                         <tr>
+//                                             <td>Sub Total</td>
+//                                             <td>₹99.99</td>
+//                                         </tr>
+//                                         <tr>
+//                                             <td>Shipping</td>
+//                                             <td>₹99.99</td>
+//                                         </tr>
+//                                         <tr className="total">
+//                                             <td>Total</td>
+//                                             <td className="total-amount">₹99.99</td>
+//                                         </tr>
+//                                     </table>
+//                                 </div>
+//                             </div>
+//                             <a href="checkout" className="btn btn-sqr d-block">Proceed Checkout</a>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </section>
+//     </>
+//   );
+// }
+
+'use client';
+import React, { useState } from 'react';
+import { FaMinus, FaPlus, FaTrashAlt } from 'react-icons/fa'; // Importing the icons
+
+export default function page() {
+    const [cartItems, setCartItems] = useState([
+        {
+            id: 1,
+            name: 'Handmade Golden Necklace ',
+            // size: 'M',
+            // color: 'Grey',
+            price: 499.00,
+            quantity: 2,
+            image: '/assets/img/product/product-15.jpg',
+        },
+        {
+            id: 2,
+            name: 'Handmade Golden Necklace',
+            // size: 'L',
+            // color: 'Blue',
+            price: 599.00,
+            quantity: 1,
+            image: '/assets/img/product/product-1.jpg', // Replace with actual image path
+        }
+    ]);
+
+    const handleIncrement = (id) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+            )
+        );
+    };
+
+    const handleDecrement = (id) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === id && item.quantity > 1
+                    ? { ...item, quantity: item.quantity - 1 }
+                    : item
+            )
+        );
+    };
+
+    const handleRemove = (id) => {
+        setCartItems((prevItems) => prevItems.filter(item => item.id !== id));
+    };
+
+    return (
+        <section className="h-100 bg-white">
+            <div className="container h-100 py-5">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="col-10">
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                            <h3 className="fw-normal mb-0">Shopping Cart</h3>
+                            <div>
+                                <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!" className="text-body">price <i className="fas fa-angle-down mt-1"></i></a></p>
+                            </div>
+                        </div>
+
+                        {cartItems.map((item) => (
+                            <div key={item.id} className="card rounded-3 mb-4">
+                                <div className="card-body p-4">
+                                    <div className="row d-flex justify-content-between align-items-center">
+                                        <div className="col-md-2 col-lg-2 col-xl-2">
+                                            <img src={item.image} className="img-fluid rounded-3" alt={item.name} />
+                                        </div>
+                                        <div className="col-md-3 col-lg-3 col-xl-3 text-black">
+                                            <p className="lead fw-normal mb-2">{item.name}</p>
+                                            {/* <p><span className="text-muted">Size: </span>{item.size} <span className="text-muted">Color: </span>{item.color}</p> */}
+                                        </div>
+                                        <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                            <button className="btn btn-link px-2" onClick={() => handleDecrement(item.id)}>
+                                                <FaMinus />
+                                            </button>
+
+                                            <input
+                                                id={`quantity-${item.id}`}
+                                                min="0"
+                                                name="quantity"
+                                                value={item.quantity}
+                                                type="number"
+                                                className="form-control form-control-sm"
+                                                readOnly
+                                            />
+
+                                            <button className="btn btn-link px-2" onClick={() => handleIncrement(item.id)}>
+                                                <FaPlus />
+                                            </button>
+                                        </div>
+                                        <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                            <h5 className="mb-0">${item.price * item.quantity}</h5>
+                                        </div>
+                                        <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                                            <a href="#!" className="text-danger" onClick={() => handleRemove(item.id)}>
+                                                <FaTrashAlt size={20} />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+
+                        <div className="card mb-2">
+                            <div className="card-body p-4 d-flex flex-row  justify-content-center ">
+                                <div className="form-outline d-flex  flex-fill  justify-content-between">
+                                    <input type="text" id="form1" className="form-control form-control-lg " placeholder='Discount code' />
+                                    {/* <label className="form-label" htmlFor="form1" >Discount code</label> */}
+                                </div>
+                                <button type="button" className="btn text-white btn-out line-warning btn-lg ms-3 bg-dark w-25">Apply</button>
+                            </div>
+                        </div>
+
+                        <div className="">
+                            <a href="checkout" className="btn btn-sqr d-block bg-dark">Proceed Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
