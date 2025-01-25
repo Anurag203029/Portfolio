@@ -36,9 +36,9 @@ const Home = () => {
             id="image-bg"
           />
           <img
-            src="./DP.png"
+            src="./canva.png"
             alt="Profile"
-            className="absolute top-10 left-1/2 transform -translate-x-1/2 w-auto h-auto md:top-10"
+            className="absolute  top-10 left-1/2 transform -translate-x-1/2 w-auto lg:h-[25rem] md:top-10"
             id="image-dp"
           />
         </div>

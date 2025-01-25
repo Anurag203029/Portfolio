@@ -8,6 +8,7 @@ import Stats from "@/components/StatsSection/StatsSection";
 const Page = () => {
   return (
     <>
+      
       <div className="overflow-x-hidden">
         {/* Main intro Section */}
         <Home />

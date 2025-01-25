@@ -21,7 +21,7 @@ const Header = () => {
       <nav className="flex items-center justify-between p-4 bg-[#25262A] text-white relative top-0 z-50">
         {/* Logo */}
         <div className="logo flex items-center">
-          <img src="./logo.svg" alt="MyLogo" className="h-8 w-auto" />
+          <img src="./logo.svg" alt="MyLogo" className="h-20 w-auto " />
         </div>
 
         {/* Desktop Links */}

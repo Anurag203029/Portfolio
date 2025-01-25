@@ -29,9 +29,8 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`z-50 fixed top-0 left-0 h-full bg-[#25262A] text-white transition-all duration-300 ${
-        isOpen ? "w-64" : "w-16"
-      }`}
+      className={`z-50 fixed top-0 left-0 h-full bg-[#25262A] text-white transition-all duration-300 ${isOpen ? "w-64" : "w-16"
+        }`}
     >
       {/* Close/Open Button */}
       <button
@@ -43,15 +42,11 @@ const Sidebar = () => {
 
       {/* Sidebar Content */}
       <div className="mt-16 flex flex-col items-center space-y-4">
-        {isOpen ? (
-          <a href="/">
-            <img src="/logo.svg" alt="Logo" />
-          </a>
-        ) : (
-          <a href="/">
-            <img src="/logo-icon.svg" alt="Logo" />
-          </a>
-        )}
+
+        <a href="/">
+          <img src="/logo.svg" alt="Logo" className="w-20" />
+        </a>
+
         <a
           href="/admin/skills"
           className="w-full flex items-center px-4 py-2 hover:bg-[#44464b]"

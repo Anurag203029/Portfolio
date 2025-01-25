@@ -57,7 +57,7 @@ const Footer = () => {
 
   return (
     <footer className="footer relative bottom-0 bg-[#25262A] p-5 flex flex-col md:flex-row items-center justify-between">
-      <img src="./logo.svg" alt="" className="mb-4 md:mb-0" />
+      <img src="./logo.svg" alt="" className="mb-4 md:mb-0 h-20 w-[12rem]   " />
       <p className="text-white mb-4 md:mb-0">
         © 2025 – Anurag Personal Portfolio.
       </p>

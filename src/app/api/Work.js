@@ -3,9 +3,9 @@ const Cookies = require("js-cookie");
 
 const token = Cookies.get("token");
 
-export const createClient = async (client) => {
+export const createWork = async (work) => {
   try {
-    const response = await axios.post("/api/client", client, {
+    const response = await axios.post("/api/work", work, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -16,9 +16,9 @@ export const createClient = async (client) => {
   }
 };
 
-export const getClients = async () => {
+export const getWorks = async () => {
   try {
-    const response = await axios.get("/api/client", {
+    const response = await axios.get("/api/work", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -29,9 +29,9 @@ export const getClients = async () => {
   }
 };
 
-export const getClientById = async (id) => {
+export const getWorkById = async (id) => {
   try {
-    const response = await axios.get(`/api/client/${id}`, {
+    const response = await axios.get(`/api/work/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -41,9 +41,9 @@ export const getClientById = async (id) => {
     throw error;
   }
 };
-export const updateClient = async (id, formData) => {
+export const updateWork = async (id, formData) => {
   try {
-    const response = await axios.patch(`/api/client/${id}`, formData, {
+    const response = await axios.patch(`/api/work/${id}`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -54,9 +54,9 @@ export const updateClient = async (id, formData) => {
   }
 };
 
-export const deleteClient = async (id) => {
+export const deleteWork = async (id) => {
   try {
-    const response = await axios.delete(`/api/client/${id}`, {
+    const response = await axios.delete(`/api/work/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -15,6 +15,8 @@ const skillsRoutes = require("./backend/routes/Skills");
 const experienceRoutes = require("./backend/routes/Experience");
 const technologyRoutes = require("./backend/routes/Technologies");
 const projectRoutes = require("./backend/routes/Posts");
+const clientRoutes = require("./backend/routes/Client");
+const workRoutes = require("./backend/routes/Work");
 
 const { use } = require("react");
 const { hasExternalOtelApiPackage } = require("next/dist/build/webpack-config");
@@ -47,6 +49,8 @@ nextApp.prepare().then(() => {
   server.use("/api/contact", contactRoutes);
   server.use("/api/experience", experienceRoutes);
   server.use("/api/post", projectRoutes);
+  server.use("/api/client", clientRoutes);
+  server.use("/api/work", workRoutes);
 
   server.all("*", (req, res) => {
     return handle(req, res);
